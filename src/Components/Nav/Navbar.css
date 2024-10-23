@@ -78,6 +78,21 @@ nav li:first-child {
 .close i {
 
 }
+
+/*Mobile-size*/
+@media (max-width: 500px) {
+
+    .logo a {
+        font-size: 2rem;
+    }
+    .menu i {
+        font-size: 2rem;
+    }
+    nav a {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 800px) {
     .hideOnMobile {
         display: none;

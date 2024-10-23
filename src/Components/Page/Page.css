@@ -12,6 +12,7 @@
     max-width: 50%;
     height: auto;
     object-fit: cover;
+    margin-right: 4vw;
 }
 .cover-txt {
     max-width: 45%;
@@ -116,4 +117,109 @@
     width: 100px;
     height: auto;
     margin-bottom: 1vw;
+}
+
+/*Animation*/
+.cover-section {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.cover-section.animate {
+    opacity: 1;
+    animation: slideUp 1s forwards;
+}
+
+.about-section {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-section.animate {
+    opacity: 1;
+    animation: slideUp 1s forwards;
+}
+
+.service-section {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.service-section.animate {
+    opacity: 1;
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*Mobile-Size*/
+@media (max-width: 500px) {
+    .cover-section {
+
+    }
+    .cover-txt {
+        max-width: 350px;
+        height: 400px;
+        padding: 2rem;
+        transform: translate(10%, -70%);
+    }
+    .cover-txt h1 {
+        font-size: 2rem;
+    }
+    .cover-txt p {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .cover-txt a {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    .cover-img {
+        max-width: 450px;
+        height: 450px;
+        margin-right: 0;
+        position: absolute;
+        top: 16rem;
+        left: 8rem;
+        z-index: -1;
+    }
+    .about-section {
+        width: 500px;
+        margin-bottom: 2rem;
+    }
+    .about-us {
+        max-width: 900px;
+        width: 800px;
+        height: 400px;
+        gap: 1rem;
+    }
+    .about-img {
+        width: 300px;
+    }
+    .about-txt {
+        width: 300px;
+        padding: 2rem;
+    }
+    .about-txt p {
+        font-size: 1.3rem;
+    }
+    .service-section {
+        width: 500px;
+    }
+    .hair-service-container {
+        gap: 2rem;
+    }
+    .hair-service {
+        width: 150px;
+    }
+    .hair-img {
+        width: 50px;
+    }
 }
